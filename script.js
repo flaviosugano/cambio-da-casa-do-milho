@@ -7,7 +7,7 @@ const url = `${apiInfo.api}${apiInfo.endpoint}`
 
 
 window.onload = () => {
-  setupEventHandlers();  
+  setupEventHandlers();
 }
 
 const setupEventHandlers = () => {
@@ -23,7 +23,7 @@ const setupEventHandlers = () => {
 }
 
 const handleSearchEvent = () => {
-  const currencyValue = document.querySelector('#currency-input').value;
+  const currencyValue = document.querySelector('#currency-input').value.toUpperCase();
 
   if (currencyValue === '') {
     renderEmptyAlert()
@@ -64,7 +64,7 @@ const handleError = (errorMessage) => {
 
 const handleRates = (rates) => {
   const ratesKeys = Object.keys(rates);
-  
+
   ratesKeys.forEach((key) => {
     const value = rates[key];
     renderRate(key, value);
