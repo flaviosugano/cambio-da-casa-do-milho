@@ -51,6 +51,7 @@ li:nth-child(even) {
   border-radius: 3px;
   margin: 10px 0;
   text-align: center;
+  text-transform: uppercase;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
